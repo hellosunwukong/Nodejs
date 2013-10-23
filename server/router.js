@@ -1,6 +1,6 @@
-var CT = require('../modules/country-list');
-var AM = require('../modules/account-manager');
-var EM = require('../modules/email-dispatcher');
+var CT = require('./modules/country-list');
+var AM = require('./modules/account-manager');
+var EM = require('./modules/email-dispatcher');
 
 module.exports = function(app) {
 	app.get('/', function(req, res){
@@ -19,5 +19,5 @@ module.exports = function(app) {
 			});
 		}
 	});
-	app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
+	// app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
 }

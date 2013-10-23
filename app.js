@@ -31,8 +31,13 @@ app.configure('development', function(){
 });
 
 // app.get('/', routes.index);
-require('./server/routes/router')(app);
+require('./server/router')(app);
 
+  app.use(function(req, res) {
+      res.status(400);
+     res.render('404.jade', {title: '404: File Not Found'});
+  });
+  
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });

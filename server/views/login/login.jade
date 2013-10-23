@@ -2,9 +2,9 @@
 extends ../layout
 
 block content
-	#login-container
+	div.container
 		form( method="post")#login-form.well.span4
-			h1 Hello!
+			h1 你好！
 			p.subheading Please Login To Your Account
 			label Username 
 			input(type="text", name="user", id='user-tf').span4.required
@@ -12,14 +12,14 @@ block content
 			input(type="password", name="pass", id='pass-tf').span4.required
 			button(type="submit")#btn-login.btn.btn-primary
 				i.icon-lock.icon-white
-				| Sign in
-			label#remember-me.checkbox Remember Me
+				| 登 陆
+			label#remember-me.checkbox 记住我
 				input(type="checkbox", checked='checked')
 			div.clear-fix
 			hr
 			div.btm-links
-				a(href='#')#forgot-password Forgot Your Password?
-				a(href='/signup')#create-account Create An Account
+				a(href='#')#forgot-password 忘记密码?
+				a(href='/signup')#create-account 
 
 	include ../modals/alert
 	include ../modals/lost-password
